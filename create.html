@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles1.css">
+    <title>Creative aspect</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="txt_main1.png" alt="logo"></a></div>
+            <ul class="nav_links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+            <a href="#" class="action_btn">Resume</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn=document.querySelector('.toggle_btn');
+        const toggle_Btnicon=document.querySelector('.toggle_btn i');
+        const dropDownMenu=document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggle_Btnicon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+    </script>
+
+    <!-- Skills Section -->
+    <section id="skills" class="content-block">
+        <h1>Skills</h1>
+        <ul>
+            <li>Adobe Photoshop, Illustrator, Premiere Pro, After Effects</li>
+            <li>Canva, Filmora</li>
+            <li>Graphic Design & Branding</li>
+            <li>Video Editing & Content Creation</li>
+            <li>Social Media Management</li>
+            <li>UI Elements & Digital Illustration</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-block">
+        <h1>Projects</h1>
+        <div>
+            <h3>Brand Identity Design</h3>
+            <p>Developed cohesive branding for startups, including logos, color palettes, and visual guidelines.</p>
+        </div>
+        <div>
+            <h3>Promotional Video Campaign</h3>
+            <p>Produced and edited short-form promotional videos for social media engagement.</p>
+        </div>
+        <div>
+            <h3>UI/UX Elements</h3>
+            <p>Designed user interface elements for digital platforms, focusing on clarity and usability.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="content-block">
+        <h1>About me</h1>
+        <p>Creativity is at the core of my identity as a designer and storyteller. I specialize in transforming ideas into visually engaging content that communicates clearly and connects with audiences. My creative journey spans across graphic design, video editing, branding, content creation, and social media management, with a focus on clarity, cohesion, and aesthetic impact.
+        <br><br>
+        Proficient in tools such as Adobe Photoshop, Illustrator, Premiere Pro, After Effects, Canva, and Filmora, I have developed diverse creative assets — from promotional videos and digital illustrations to UI elements and social campaigns. My design philosophy emphasizes visual harmony, strong narratives, and purpose-driven aesthetics.
+        <br><br>
+        Every project I take on is approached with attention to detail, creative strategy, and adaptability. Whether I’m crafting a brand identity, editing a short-form video, or conceptualizing layouts for a digital platform, I strive to align visuals with the intended message and audience.
+        <br><br>
+        This portfolio section showcases a selection of my creative work, reflecting my ability to merge technical tools with imaginative thinking. Through continuous learning and experimentation, I aim to deliver content that not only looks appealing but also tells a story, evokes emotion, and drives engagement.
+        </p>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="content-block">
+        <h1>Contact me</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">Phone number: +91 8779310929</label>
+            </div> 
+            <div class="form-group">
+                <label for="message">Email:aryanbi0706@gmail.com</label>
+            </div>
+            <button type="submit" class="btn btn-dark">Back up</button>
+        </form>
+    </section>
+</body>
+</html>

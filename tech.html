@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles2.css">
+    <title>Creative aspect</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="txt_main1.png" alt="logo"></a></div>
+            <ul class="nav_links">
+                <li><a href="Skills">Skills</a></li>
+                <li><a href="About me">About me</a></li>
+                <li><a href="Projects">Projects</a></li>
+                <li><a href="Academics">Academics</a></li>
+                <li><a href="Contact me">Contact me</a></li>
+            </ul>
+            <a href="#" class="action_btn">Resume</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="Skills">Skills</a></li>
+            <li><a href="About me">About me</a></li>
+            <li><a href="Home">Home</a></li>
+            <li><a href="Projects">Projects</a></li>
+            <li><a href="Academics">Academics</a></li>
+            <li><a href="Contact me">Contact me</a></li>
+</div>
+    </header>
+    <script>
+        const toggleBtn=document.querySelector('.toggle_btn');
+        const toggle_Btnicon=document.querySelector('.toggle_btn i');
+        const dropDownMenu=document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggle_Btnicon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+        
+    </script>
+<section id="skills" class="content-block">
+        <h1>Skills</h1>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Python, Djang</li>
+            <li>Git &amp; GitHub</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-block">
+        <h1>Projects</h1>
+        <div>
+            <h3>Brand Identity Design</h3>
+            <p>Developed cohesive branding for startups, including logos, color palettes, and visual guidelines.</p>
+        </div>
+        <div>
+            <h3>Promotional Video Campaign</h3>
+            <p>Produced and edited short-form promotional videos for social media engagement.</p>
+        </div>
+        <div>
+            <h3>UI/UX Elements</h3>
+            <p>Designed user interface elements for digital platforms, focusing on clarity and usability.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="content-block">
+        <h1>About me</h1>
+        <p>I’m a technically driven developer and innovator, currently pursuing B.Tech in Electronics and Communication Engineering with a deep-rooted passion for building impactful digital solutions. My work spans across Python, C, C++, Java, and HTML, with a particular interest in transforming code into real-world tools and experiences.
+
+From creating a sign language translator app (“Signify”) that bridges communication gaps to building a goal-tracking web application (“GoalSync”) that adapts to user burnout levels, I bring a unique blend of problem-solving, UI/UX awareness, and logical design to each project I develop.
+
+My technical toolkit includes:
+
+Languages & Frameworks: Python, C, C++, Java, HTML/CSS, JavaScript
+
+Libraries & Tools: NumPy, Pandas, OpenCV, Flask, Bolt.new, Firebase
+
+Development Areas: Full-stack development, automation, computer vision, embedded systems
+
+Version Control & Deployment: Git/GitHub, Vercel, Replit, Netlify
+
+Creative Engineering: Idea-to-execution transformation, user-focused innovation, adaptive goal systems
+
+Each project I build reflects my ability to innovate with intent — leveraging code not just to function, but to make users feel, learn, or achieve more.</p>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="content-block">
+        <h1>Contact me</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">Phone number: +91 8779310929</label>
+            </div> 
+            <div class="form-group">
+                <label for="message">Email:aryanbi0706@gmail.com</label>
+            </div>
+            <button type="submit" class="btn btn-dark">Back up</button>
+        </form>
+    </section>
+</body>
+</html>

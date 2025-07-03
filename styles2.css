@@ -1,0 +1,198 @@
+body {
+    min-height: 400vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: url('bg1_techn.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    
+}
+
+.content-block {
+    background: rgba(255,255,255,0.6);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0rem auto;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+    z-index: 10;
+    position: relative;
+    min-height: 1300px;
+    transform: translateY(50px);
+}
+
+.navbar {
+    width: 100%;
+    height:60px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;                   
+}
+
+.navbar .logo a img{
+     width: 250px;
+    height: auto;
+}
+
+.navbar .logo a{
+    width: 300px;
+    height: auto;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transform: translateX(-30px);
+}
+
+.navbar .toggle_btn{
+    color: black;
+    font-size:1.5rem;
+    cursor:pointer;
+    display:none;
+}
+
+.action_btn {
+    background: transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.4s cubic-bezier(.4,0,.2,1), color 0.2s;
+}
+
+.action_btn:hover {
+    background: linear-gradient(90deg, rgba(140,40,200,0.9) 0%, rgba(255,70,180,0.9) 100%);
+    color: white;
+    box-shadow: 0 0 16px 4px rgba(140,40,200,0.3), 0 0 32px 8px rgba(255,70,180,0.2);
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size:1rem;
+    transition: background 0.4s cubic-bezier(.4,0,.2,1), color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+
+}
+
+a:hover,
+.nav_links a:hover{
+    background: linear-gradient(90deg, rgba(140,40,200,0.9) 0%, rgba(208, 57, 148, 0.9) 100%);
+    color: white;
+    box-shadow: 0 0 16px 4px rgba(140,40,200,0.3), 0 0 32px 8px rgba(255,70,180,0.2);
+    text-decoration: none;
+}
+header{
+    position:relative;
+    padding: 0 2rem;
+}
+
+.dropdown_menu{
+    display:none;
+    position:absolute;
+    z-index: 10;
+    right:2rem;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255,255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 0 20px 8px rgba(255,255,255,0.2), 0 0 40px 16px #ff785a66;
+    transition: height .2s cubic-bezier(0.175, 0.882, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: auto;
+    display: block;
+}
+
+.dropdown_menu li{
+    padding:0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff785a66;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media(max-width: 968px){
+    .navbar .nav_links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display:block;
+    }
+
+
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    z-index: 2;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.content-block, section {
+    background: rgba(255,255,255,0.6);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+    z-index: 10;
+    position: relative;
+    min-height: 0;
+    transform: translateY(50px);
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
